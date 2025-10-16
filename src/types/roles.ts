@@ -13,7 +13,7 @@ export const DEFAULT_USER_ROLE: UserRoleNames =
     process.env.DEFAULT_USER_ROLE as UserRoleNames,
   )
     ? (process.env.DEFAULT_USER_ROLE as UserRoleNames)
-    : USER_ROLES.EDITOR;
+    : USER_ROLES.USER;
 
 export type UserRolesInfo = Record<
   UserRoleNames,
