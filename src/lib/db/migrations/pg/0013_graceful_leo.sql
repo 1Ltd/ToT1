@@ -26,7 +26,7 @@ ALTER TABLE "session" ADD COLUMN IF NOT EXISTS "impersonated_by" text;--> statem
 ALTER TABLE "user" ADD COLUMN IF NOT EXISTS "banned" boolean;--> statement-breakpoint
 ALTER TABLE "user" ADD COLUMN IF NOT EXISTS "ban_reason" text;--> statement-breakpoint
 ALTER TABLE "user" ADD COLUMN IF NOT EXISTS "ban_expires" timestamp;--> statement-breakpoint
-ALTER TABLE "user" ADD COLUMN IF NOT EXISTS "role" text DEFAULT 'user' NOT NULL;--> statement-breakpoint
+ALTER TABLE "editor" ADD COLUMN IF NOT EXISTS "role" text DEFAULT 'user' NOT NULL;--> statement-breakpoint
 -- Set user_id for existing MCP servers to first admin user (or first user if no admin)
 UPDATE "mcp_server" SET "user_id" = COALESCE(
   (SELECT id FROM "user" WHERE role = 'admin' ORDER BY created_at ASC LIMIT 1),
