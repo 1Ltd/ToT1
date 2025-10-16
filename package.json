@@ -1,8 +1,8 @@
 {
-  "name": "better-chatbot",
-  "version": "1.24.0",
+  "name": "tomato",
+  "version": "1.25.0",
   "private": true,
-  "author": "cgoinglove",
+  "author": "1Ltd & Phireox",
   "license": "MIT",
   "type": "module",
   "scripts": {
